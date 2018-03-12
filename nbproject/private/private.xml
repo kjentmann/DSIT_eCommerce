@@ -3,6 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/web/WEB-INF/sun-web.xml</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/web/start.jsp</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/src/conf/persistence.xml</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/src/java/web/action/categoryAction.java</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/web/undone.jsp</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/src/java/cart/ShoppingCart.java</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/src/java/web/ControllerServlet.java</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/web/WEB-INF/glassfish-web.xml</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/src/java/model/CategoryModel.java</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/src/java/model/ProductModel.java</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/setup/sun-resources.xml</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/src/java/web/action/initAction.java</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/src/java/web/action/Action.java</file>
+            <file>file:/C:/Users/madsf/Insync/01_Utdanning/06_Distributed_Systems_Internet_Web/2%20classical%20web%20applications/eCommerce_exercise/web/view/init.jsp</file>
+        </group>
     </open-files>
 </project-private>

@@ -13,9 +13,9 @@
 
         <h2>Welcome to the online home of the Affable Bean Green Groceries</h2>
 
-        <h3> Our unique home delivery service brings you fresh organic produce,
+        <h3> Our unique green focused home delivery service brings you fresh organic produce,
         dairy, meats, breads and other delicious and healthy items direct
-        to your doorstep. </h3>
+        to your doorstep right from Norway in a highly polluting and environment killing way. Happy shopping! </h3>
 
 
     <table width="50%" border="2" bordercolordark="#000000" bordercolorlight="#FFFFFF" cellpadding="3" cellspacing="0">

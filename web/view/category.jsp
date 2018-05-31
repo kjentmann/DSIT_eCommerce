@@ -23,14 +23,15 @@
        String totPrice="0.0";
        String catName =" ";
        String id="1";
+       
        try{
-       ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
+       ShoppingCart cart= (ShoppingCart) session.getAttribute("cart");
        id = (String)request.getParameter("categoryid");
        catName = id;
        totPrice = String.format( "%.2f",cart.getTotal());
        numItems = Integer.toString(cart.getNumberOfItems());
        catName= (String)request.getAttribute("catName");
-
+       
        }catch(Exception ex){
            System.out.println("Exception catched in category init jsp");
        }
@@ -45,20 +46,7 @@
                 <img src="img/cart.gif"> Your cart has <%=numItems%> items.<br>
                 <img src="img/cart.gif"> Total price of <%=totPrice%> £  <br>
                 <a href="viewcart.do"> Show shopping cart.</a> <br> 
-                  <%-- PAYPAL --%>
-            </td><td>  
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                 <input type="hidden" name="cmd" value="_xclick">
-                 <input type="hidden" name="business" value="madsoft@student.etsetb.upc.com">
-                 <input type="hidden" name="item_name" value="Shopping cart items from  Affable Bean Green Grocery">
-
-                 <input type="hidden" name="currency_code" value="EUR">
-                 <input type="hidden" name="amount" value="<%=totPrice%>"
-                 <input type="image" src="img/paypal.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"> 
-                 <br>
-                 <input type="submit"n ame="submit" value="Proceed to checkout">
-                </form>
-                <br>
+       
             </td>
         
         </tr>
@@ -109,9 +97,20 @@
 
             <td width=' 10'<font size="2" face="Verdana">
                 Select desired amount
-
+                
+               <%
+                   Integer numProduct;
+                   try{
+                    ShoppingCart cart= (ShoppingCart) session.getAttribute("cart");
+                    numProduct=cart.getQuantityInChartOrOne(product.getId());
+                   }catch(Exception e){
+                       System.out.println("Exception while trying to do some overkill function because Java is fun");
+                       numProduct=1;
+                   }
+                   %>
+                   
                 <form action="neworder.do" method="post">
-                <input type="" name="num" value="1">
+                    <input type="" name="num" value="<%=Integer.toString(numProduct)%>">
                 <input type="hidden" name="product" value="<%=product.getName()%>">
                 <input type="hidden" name="category" value="<%=id%>">
                 <input type="submit"n ame="submit" value="add to cart">
@@ -126,5 +125,19 @@
         </font> </tr>
 
     </table>
+           <br>           
+
+                      <%-- PAYPAL --%>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                 <input type="hidden" name="cmd" value="_xclick">
+                 <input type="hidden" name="business" value="madsoft@student.etsetb.upc.com">
+                 <input type="hidden" name="item_name" value="Shopping cart items from  Affable Bean Green Grocery">
+
+                 <input type="hidden" name="currency_code" value="EUR">
+                 <input type="hidden" name="amount" value="<%=totPrice%>">
+                 <input type="image" src="img/paypal.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"> 
+                 <br>
+                 <input type="submit"n ame="submit" value="Proceed to checkout">
+                </form>
     </body>
 </html>

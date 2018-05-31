@@ -36,14 +36,19 @@ public class neworderAction extends Action{
         ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
         String category = req.getParameter("category");
         String product = req.getParameter("product");
-        Integer quantity = Integer.parseInt(req.getParameter("num"));
-
+        try{
+        Integer quantity = Math.abs(Integer.parseInt(req.getParameter("num")));
         Product newproduct = productModel.getProductByName(product);
         cart.addItem(newproduct,quantity);
         session.setAttribute("cart", cart);
+        System.out.println(quantity + " " + product + " will be added to cart..");
+
+        }
+        catch(Exception e){
+            System.out.println("Error while parsing int. Try with valid input. Nothing was added.");
+        }
         req.setAttribute("productsOfCategory", productModel.retrieveProducts(category));
 
-        System.out.println(quantity + " " + product + " will be added to cart..");
         ViewManager.nextView(req, resp, "/category.do?categoryid="+category);
     }
 }

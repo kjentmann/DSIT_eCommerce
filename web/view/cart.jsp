@@ -44,21 +44,8 @@
    <a href="init.do"> Continue shopping</a> <br> <br>
    <a href="clearcart.do"> Empty your cart</a> <br> <br>
   
-   <%-- PAYPAL --%>
-   <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="mads@student.UPC.com">
-    <input type="hidden" name="item_name" value="Shopping cart items from  Affable Bean Green Grocery">
-    <input type="hidden" name="currency_code" value="EUR">
-    <input type="hidden" name="amount" value="<%=totalSum%>"
-    <input type="image" src="img/paypal.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"> 
-    <br>
-    <input type="submit"n ame="submit" value="Proceed to checkout">
-    </form>
-    <br>
-    <br>
         
-    <table width="60%" border="3" bordercolordark="#000000" bordercolorlight="#FFFFFF" cellpadding="3" cellspacing="0">
+    <table width="95%" border="3" bordercolordark="#000000" bordercolorlight="#FFFFFF" cellpadding="3" cellspacing="0">
     <tr>
         <td><h3>Product</td><td><h3>Information</td> <td><h3>Price</td><td><h3>Quantity</td></h3>
     </tr>
@@ -102,7 +89,20 @@
        <tr>
        <td></td><td>TOTAL SUM:</td><td><h3><%=totalSum%> £ </h3></tr>
     </table>
-      
+    <br>
+
+   <%-- PAYPAL --%>
+   <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="mads@student.UPC.com">
+    <input type="hidden" name="item_name" value="Shopping cart items from  Affable Bean Green Grocery">
+    <input type="hidden" name="currency_code" value="EUR">
+    <input type="hidden" name="amount" value="<%=totalSum%>">
+    <input type="image" src="img/paypal.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"> 
+    <br>
+    <input type="submit"n ame="submit" value="Proceed to checkout">
+    </form>
+    
 <%
 }
        catch(Exception ex){

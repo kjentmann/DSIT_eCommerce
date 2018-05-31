@@ -23,12 +23,12 @@ public class ShoppingCart {
 
 
     public synchronized void update(String productId, String quantity){
-         if (my_cart.containsKey(Integer.parseInt(productId))){
-             my_cart.get(Integer.parseInt(productId)).setQuantity(Integer.parseInt(quantity));
-         }
-         else{
-             System.out.println("Error while updateing shopping cart");
-         }
+             try{  //Try/catch to avoid non accepted user input
+                my_cart.get(Integer.parseInt(productId)).setQuantity(Math.abs(Integer.parseInt(quantity)));
+             }
+             catch(Exception e){
+                System.out.println("Error while updateing shopping cart");
+             }
     }
 
 
@@ -38,6 +38,13 @@ public class ShoppingCart {
             items.add(item);
     }
         return items;
+    }
+    public synchronized int getQuantityInChartOrOne(Integer productId){
+        if (this.my_cart.containsKey(productId)){
+            return this.my_cart.get(productId).getQuantity();
+        }
+        else
+            return 1;
     }
 
     public synchronized int getNumberOfItems(){

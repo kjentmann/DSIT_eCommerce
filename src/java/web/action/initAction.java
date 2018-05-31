@@ -14,9 +14,9 @@ public class initAction extends Action {
     }
 
     public void perform(HttpServletRequest req, HttpServletResponse resp) {
-        ShoppingCart emptycart = new ShoppingCart();
-        HttpSession session = req.getSession();
-        session.setAttribute("cart",emptycart);
+//        ShoppingCart emptycart = new ShoppingCart();
+  //      HttpSession session = req.getSession();
+       // session.setAttribute("cart",emptycart);
         req.setAttribute("categories", categoryModel.retrieveAll());
         ViewManager.nextView(req, resp, "/view/init.jsp");
         System.out.println("Inital action excecuted.");
